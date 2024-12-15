@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-size: 13px;
+  background-color: var(--bg-color);
+  color: var(--text-color-primary);
+}
+
+input, select {
+  accent-color: var(--accent-color);
+}
+
+input[type="text"],
+textarea {
+  color: var(--text-color-primary);
+  border: 1px solid var(--border-color);
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  border-color: var(--accent-color);
+  outline: none;
+}
+
+.border,
+.border-l,
+.border-t,
+.border-b,
+.border-r {
+  border-color: var(--border-color);
+}
+
+.hide-box .bbox {
+  opacity: 0;
+  z-index: -1;
+}
+.hide-box .bbox.reveal {
+  opacity: 1;
+  z-index: 1;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 20px;
+}
+
+.chat-container {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.message {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.message.user {
+  background-color: #e3f2fd;
+  margin-left: 20%;
+}
+
+.message.model {
+  background-color: #f5f5f5;
+  margin-right: 20%;
+}
+
+.input-container {
+  padding: 20px;
+  border-top: 1px solid #eee;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.input-controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.upload-button {
+  padding: 8px 16px;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.upload-button:hover {
+  background-color: #1565c0;
+}
+
+.selected-image {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.remove-image {
+  padding: 4px 8px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.remove-image:hover {
+  background-color: #c82333;
+}
+
+input[type="text"] {
+  flex: 1;
+}
